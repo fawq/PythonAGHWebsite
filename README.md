@@ -1,6 +1,6 @@
 # PythonAGHWebsite
 
-Jest to strona napisana w Django (przy użyciu PyCharm). Główne pliki znajdują się w folderze spoldzielnia oarz templates.
+Jest to strona napisana w Django (przy użyciu PyCharm). Główne pliki znajdują się w folderze spoldzielnia oraz templates.
 W templates przechowuje wszytkie widoki html natomiast w spoldzielnia znajduje sie views oraz models.
 Views odpowiada za widoki i je kontroluje natomiast w models jest zapisany szkielet bazy danych.
 Ponadto w zad3 znajduje się przykładowa już wypełniona baza.
