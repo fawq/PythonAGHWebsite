@@ -1,0 +1,11 @@
+<div id="paymentedit">
+    <h1>Edit payment</h1>
+    {{ payment.name }} {{ payment.price }}
+
+    <form action={% url 'paymentupdate' payment.id %} method="get">
+        {% csrf_token %}
+        Name: <input type="text" name="name" value='{{ payment.name }}'>
+        <br>Price: <input type="text" name="price" value='{{ payment.price }}'>
+        <br><input type="submit" value="Submit">
+    </form>
+</div>

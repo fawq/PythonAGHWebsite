@@ -1,0 +1,15 @@
+<div id="resident">
+    <h1>Housing cooperative - residents</h1>
+
+    <ul>
+        {% for i in residents %}
+            <li>
+                <a href= {% url 'residentshow' i.id %}>
+                    {{ i.firstname }} {{ i.lastname }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <br><br><a href= {% url 'index' %}>Return to index</a>
+</div>

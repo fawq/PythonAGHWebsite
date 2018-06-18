@@ -1,0 +1,10 @@
+<div id="paymentnew">
+    <h1>Add payment to resident</h1>
+
+    <form action={% url 'paymentcreate' residentid %} method="get">
+        {% csrf_token %}
+        Name: <input type="text" name="name">
+        <br>Price: <input type="text" name="price">
+        <br><input type="submit" value="Submit">
+    </form>
+</div>

@@ -1,0 +1,19 @@
+<div id="indexshow">
+    <h1>{{ flat.adress }}</h1>
+
+    <ul>
+        {% for i in residents %}
+            <li>
+                <a href= {% url 'residentshow' i.id %}>
+                    {{ i.firstname }} {{ i.lastname }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href= {% url 'residentnew' flat.id %}>Add resident</a>
+    <br><a href= {% url 'indexedit' flat.id %}>Edit flat</a>
+    <br><a href= {% url 'indexdestroy' flat.id %}>Delete flat</a>
+
+    <br><br><a href= {% url 'index' %}>Return to index</a>
+</div>

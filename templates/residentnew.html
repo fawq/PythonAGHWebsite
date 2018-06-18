@@ -1,0 +1,11 @@
+<div id="residentnew">
+    <h1>Add resident to flat</h1>
+
+    <form action={% url 'residentcreate' flatid %} method="get">
+        {% csrf_token %}
+        Firstname: <input type="text" name="firstname">
+        <br>Lastname: <input type="text" name="lastname">
+        <br>NIN: <input type="text" name="NIN">
+        <br><input type="submit" value="Submit">
+    </form>
+</div>

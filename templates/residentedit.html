@@ -1,0 +1,12 @@
+<div id="residentedit">
+    <h1>Edit resident</h1>
+    {{ resident.firstname }} {{ resident.lastname }}
+
+    <form action={% url 'residentupdate' resident.id %} method="get">
+        {% csrf_token %}
+        Firstname: <input type="text" name="firstname" value='{{ resident.firstname }}'>
+        <br>Lastname: <input type="text" name="lastname" value='{{ resident.lastname }}'>
+        <br>NIN: <input type="text" name="NIN" value='{{ resident.NIN }}'>
+        <br><input type="submit" value="Submit">
+    </form>
+</div>

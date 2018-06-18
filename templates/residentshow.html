@@ -1,0 +1,22 @@
+<div id="residentshow">
+    <h1>{{ resident.firstname }} {{ resident.lastname }}</h1>
+    {{ resident.NIN }}, {{ flat.adress }}
+
+    <ul>
+        {% for i in payments %}
+            <li>
+                <a href= {% url 'paymentshow' i.id %}>
+                    {{ i.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    Sum of payments: {{ suma }}
+
+    <br><a href= {% url 'paymentnew' resident.id %}>Add payment</a>
+    <br><a href= {% url 'residentedit' resident.id %}>Edit resident</a>
+    <br><a href= {% url 'residentdestroy' resident.id %}>Delete resident</a>
+
+    <br><br><a href= {% url 'indexshow' flat.id %}>Return to flat</a>
+    <br><a href= {% url 'resident' %}>Return to list of all residents</a>
+</div>

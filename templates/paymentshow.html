@@ -1,0 +1,9 @@
+<div id="paymentshow">
+    <h1>{{ payment.name }}</h1>
+    {{ payment.price }}, {{ resident.firstname }} {{ resident.lastname }}
+
+    <br><a href= {% url 'paymentedit' payment.id %}>Edit payment</a>
+    <br><a href= {% url 'paymentdestroy' payment.id %}>Delete payment</a>
+
+    <br><br><a href= {% url 'residentshow' resident.id %}>Return to resident</a>
+</div>

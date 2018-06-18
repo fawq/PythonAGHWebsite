@@ -1,0 +1,10 @@
+<div id="indexnew">
+    <h1>Add flat</h1>
+
+    <form action={% url 'indexcreate' %} method="get">
+        {% csrf_token %}
+        Adress: <input type="text" name="adress">
+        <br>Postcode: <input type="text" name="postcode">
+        <br><input type="submit" value="Submit">
+    </form>
+</div>

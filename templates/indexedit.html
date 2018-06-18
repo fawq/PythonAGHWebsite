@@ -1,0 +1,11 @@
+<div id="indexedit">
+    <h1>Edit flat</h1>
+    {{ flat.adress }}, {{ flat.postcode }}
+
+    <form action={% url 'indexupdate' flat.id %} method="get">
+        {% csrf_token %}
+        Adress: <input type="text" name="adress" value='{{ flat.adress }}'>
+        <br>Postcode: <input type="text" name="postcode" value='{{ flat.postcode }}'>
+        <br><input type="submit" value="Submit">
+    </form>
+</div>

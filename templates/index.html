@@ -1,0 +1,21 @@
+<div id="index">
+    <h1>Housing cooperative - flats</h1>
+
+    <ul>
+        {% for i in flats %}
+            <li>
+                <a href= {% url 'indexshow' i.id %}>
+                    {{ i.adress }}
+                    <br>
+                    {{ i.postcode }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+    <a href= {% url 'indexnew' %}>New flat</a>
+    <br><a href= {% url 'resident' %}>All residents</a>
+</div>
+
+
